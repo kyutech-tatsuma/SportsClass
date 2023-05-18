@@ -96,7 +96,7 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 
 #perplexityはtest_dataが30以上あるときは指定しなくてよい
-tSNE_metrics = TSNE(n_components=2, random_state=0, perplexity=15).fit_transform(test_predicted_metrics[-1])
+tSNE_metrics = TSNE(n_components=2, random_state=0).fit_transform(test_predicted_metrics[-1])
 
 plt.scatter(tSNE_metrics[:, 0], tSNE_metrics[:, 1], c=test_true_labels[-1])
 plt.colorbar()
